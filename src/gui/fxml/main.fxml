@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: dimgrey;"
+            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="gui.MainController">
+    <top>
+        <ToolBar BorderPane.alignment="CENTER">
+            <items>
+                <MenuButton mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#neww" text="New">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#open" text="Open...">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#save" text="Save" fx:id="saveButton">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#saveAs" text="Save As...">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="DOWN"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                    </items>
+                </MenuButton>
+                <Button mnemonicParsing="false" text="⟲" onAction="#undo" fx:id="undoButton">
+                    <tooltip>
+                        <Tooltip text="Undo (Ctrl + Z)"/>
+                    </tooltip>
+                </Button>
+                <Button mnemonicParsing="false" text="⟳" onAction="#redo">
+                    <tooltip>
+                        <Tooltip text="Redo (Ctrl + Y)"/>
+                    </tooltip>
+                </Button>
+                <Separator orientation="VERTICAL"/>
+                <Button defaultButton="true" mnemonicParsing="false" onAction="#solve" text="Solve">
+                    <tooltip>
+                        <Tooltip text="Solve this Sudoku (S)"/>
+                    </tooltip>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#reset" text="Reset">
+                    <tooltip>
+                        <Tooltip text="Reset this Sudoku (Ctrl + S)"/>
+                    </tooltip>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#generate" text="Generate">
+                    <tooltip>
+                        <Tooltip text="Generate an entirely new Sudoku (discards the current one) (Ctrl + G)"/>
+                    </tooltip>
+                </Button>
+                <Separator orientation="VERTICAL"/>
+                <Button mnemonicParsing="false" onAction="#help" text="?">
+                    <tooltip>
+                        <Tooltip text="Help (F1)"/>
+                    </tooltip>
+                </Button>
+            </items>
+        </ToolBar>
+    </top>
+</BorderPane>
