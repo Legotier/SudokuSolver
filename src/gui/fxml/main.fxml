@@ -61,7 +61,7 @@
                 </Button>
                 <Button mnemonicParsing="false" onAction="#reset" text="Reset">
                     <tooltip>
-                        <Tooltip text="Reset this Sudoku (Ctrl + S)"/>
+                        <Tooltip text="Reset this Sudoku (Ctrl + R)"/>
                     </tooltip>
                 </Button>
                 <Button mnemonicParsing="false" onAction="#generate" text="Generate">
